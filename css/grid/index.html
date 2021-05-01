@@ -5,6 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .wrapper {
+            display:grid;
+            grid-template-columns: 30% 70%;
+            grid-column-gap:.5em;
+            /* grid-row-gap:.5em; */
+            /* OR 
+             grid-gap 
+             */
+        }
+
+        .wrapper > div {
+            background: #eee;
+            padding: 1em;
+        }
+
+        .wrapper > div:nth-child(odd) {
+            background: #ddd;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
