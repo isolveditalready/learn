@@ -1,0 +1,86 @@
+#container {
+    display:grid;
+    grid-template-columns: 3.7fr 8fr;
+    grid-column-gap: .3em;
+}
+
+#container > div {
+    background: rgb(250, 243, 243);
+    padding: .3em;
+}
+
+#container > div:nth-child(odd) {
+    /*background: #f8ebeb; */
+    background: rgb(250, 243, 243);
+}
+
+#left {
+        position: sticky;
+        top: 0;
+        height: 50vh;
+        box-sizing: border-box;
+} 
+
+.rightOverall {
+    display:grid;
+    grid-template-rows: .1fr 10fr;
+    grid-gap: .3em;
+}
+
+.rightOverall > div {
+    border: rgb(253, 250, 250) 1px solid;
+    padding: .3em;
+}
+
+.leftOverall {
+    display:grid;
+    grid-template-rows: 1fr 2fr 5fr 2fr 2fr;
+    grid-gap:.3em;
+}
+
+.leftOverall > div {
+    /*border: rgb(253, 242, 242) 1px solid; */
+    border: rgb(253, 250, 250) 1px solid;
+    padding: .3em;
+}
+
+#definition {
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+}
+
+#definition > div {
+    padding: .1em;
+    border: rgb(253, 250, 250) 1px solid;
+}
+
+nav {
+    list-style: none;
+}
+
+#search2 {
+    display:grid;
+    grid-template-rows: 1fr,2fr,2fr,3fr ;
+    grid-gap:.2em;
+}
+
+#header--search2 {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-weight:bold;
+    font-size:1.7em;
+}
+
+#search2 > .myForm {
+    display: grid;
+    grid-template-columns: 8fr, .5fr;
+   /* border:rgb(19, 18, 18) 1px solid; */
+     border: rgb(253, 250, 250) 1px solid;
+
+}
+
+#input1--search2 > div {
+    background: rgb(253, 250, 250);
+    padding: .3em;
+}
