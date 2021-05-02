@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;`
+        }
+        .wrapper {
+            display: grid;
+            grid-template-columns: 2fr 5fr;
+            border: red .5px solid; 
+            gap: 3px;
+        }
+        .right {
+            border: blue 1px solid;
+            display: grid;
+            grid-template-columns: 1.5fr .5fr;
+            padding: .1em;
+        }
+        .left {
+            border: green 1px solid;
+        }
+        .oneA {
+            border: yellow 3px solid;
+        }
+        .oneB {
+            border: pink 4px solid;
+        }
+
+        h3 {
+            display:grid;
+            align-items: center;
+            justify-items: center;
+            width:100%;
+
+        }
+        input {
+            display: grid;
+        }
+
+        select {
+            display: grid;
+        }
+
+
+    </style>
+</head>
+<body>
+   <div class="wrapper">
+      <div class="right">
+        <div class="right--search">
+
+        </div>
+        <div class="right--search2">
+            <form>
+                <h3>search</h3>
+                <input type="text" id="searchInput" placeholder="search this....">
+                <select id="optionId" name="optionName">
+                    <option value="optionOne">one</option>
+                    <option value="optionTwo">Two</option>
+                    <option value="optionNone" selected>None</option>
+                </select>
+                <input type="text" id="searchInput2" placeholder="date">
+                <button id="buttonId">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="left">
+        <div class="left--menu"></div>
+        <div class="left-output"></div>
+    </div>
+   </div> 
+</body>
+</html>

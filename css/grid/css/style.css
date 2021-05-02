@@ -1,3 +1,5 @@
+
+
 #container {
     display:grid;
     grid-template-columns: 3.7fr 8fr;
@@ -72,15 +74,24 @@ nav {
     font-size:1.7em;
 }
 
-#search2 > .myForm {
+.myForm {
     display: grid;
-    grid-template-columns: 8fr, .5fr;
-   /* border:rgb(19, 18, 18) 1px solid; */
      border: rgb(253, 250, 250) 1px solid;
+     grid-template-columns: 250px .2fr;
 
 }
 
 #input1--search2 > div {
     background: rgb(253, 250, 250);
     padding: .3em;
+}
+
+button,input,textarea,select {
+    padding: .7em;
+}
+
+h3 {
+   display: grid; 
+   align-items: center;
+   justify-content: center;
 }
