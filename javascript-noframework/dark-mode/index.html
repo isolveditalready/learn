@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" id="themeStyleSheetLink" href="css/themes/default.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+   <label for="">theme:</label>
+   <select name="" id="themeSelect">
+       <option value="default">light</option>
+       <option value="dark">dark</option>
+   </select>
+   <hr> 
+    <h2>Theme Selector with JavaScript & CSS</h2>
+    <p>It's very easy to create a theme selector with Javascript & CSS</p>
+    <p>It will even save on page refresh!</p>
+    <script>
+
+        // read the localstorage to see if theme is availabe, if so, read it
+
+        function initThemeSelector() {
+            let currentTheme = localStorage.getItem('theme')  || 'default'
+            const themeStyleSheetLink = document.querySelector('#themeStyleSheetLink')
+            const themeSelect = document.querySelector('#themeSelect')
+
+            function activateTheme(themeName) {
+                themeSelect.value = themeName
+                themeStyleSheetLink.setAttribute('href', `css/themes/${themeName}.css`)
+            }
+
+            themeSelect.addEventListener('change', (e) => {
+                let theme = e.target.value
+                themeSelect.value = theme
+                localStorage.setItem('theme', theme )
+                activateTheme(theme)
+            })
+
+            activateTheme(currentTheme)
+        }
+        initThemeSelector()
+
+        //themeStyleSheetLink.a[href="css/themes/dark.css"]
+    </script>
+</body>
+</html>
