@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-cm {
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+            padding: 10px 0;
+            width: 200px;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .custom-cm__item {
+            cursor: pointer;
+            padding: 8px 15px;
+        }
+
+        .custom-cm__item:hover {
+            background-color: #f8f8f8;
+        }
+
+        .custom-cm__divider {
+            border-bottom: 1px solid #eeeeee;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+   <h1>Context Menu - Javascript</h1> 
+   <div class="custom-cm">
+       <div class="custom-cm__item">Item #1</div>
+       <div class="custom-cm__item">Item #2</div>
+       <div class="custom-cm__item">Item #3</div>
+       <div class="custom-cm__divider"></div>
+       <div class="custom-cm__item">Item #4</div>
+   </div>
+   <script>
+       const cm = document.querySelector('.custom-cm')
+
+       const showContextMenu = (show = true) => {
+           cm.style.display = show ? 'block' : 'none'
+           console.log(cm)
+       }
+
+       window.addEventListener('contextmenu', (e) => {
+           e.preventDefault()
+           console.log(e)
+           console.log(e.y)
+           console.log(e.x)
+           showContextMenu()
+           cm.style.top = e.y + 'px'
+           cm.style.left = e.x + 'px'
+       })
+
+       window.addEventListener('click', () => {
+           showContextMenu(false)
+       })
+   </script>
+</body>
+</html>

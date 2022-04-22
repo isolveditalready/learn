@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        .navbar {
+            position: fixed;
+            top:0;
+            left: -200px;
+            width: 200px;
+            height: 100%;
+            background: #009879;
+            border-right: 2px spolid #008C71;
+            box-shadow: 0 0 10px 5px rgba(0,0,0,0.25);
+            opacity: 0;
+            transition: left 0.25s ease-in-out, opacity .25s ease-in-out ;
+        }
+
+        .show {
+            left: 0;
+            opacity: 1;
+        }
+
+        .navbar__link {
+            display: flex;
+            align-items: center;
+            background: #008C71;
+            text-decoration: none;
+            color: #ffffff;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #009879;
+        }
+
+        .navbar__link .material-icons {
+            margin-right: 12px;
+        }
+
+        .navbar__link:hover {
+            background-color: pink;
+        }
+
+        .navbar__link:active {
+            background: #007d65;
+        }
+        button {
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+   <h1>Navigation Bar with Icons</h1> 
+   <button>Nav</button>
+   <div class="navbar">
+        <a href="#" class="navbar__link">
+            <span class="material-icons">home</span>Home
+        </a>
+        <a href="#" class="navbar__link">
+            <span class="material-icons">photo_library</span>Photos
+        </a>
+        <a href="#" class="navbar__link">
+            <span class="material-icons">question_answer</span>Forum
+        </a>
+        <a href="#" class="navbar__link">
+            <span class="material-icons">exit_to_app</span>Logout
+        </a>
+   </div>
+   <script>
+       const button = document.querySelector('button')
+       const nav = document.querySelector('.navbar')
+       button.addEventListener('click', () => {
+           console.log('shit was clicked')
+           nav.classList.toggle('show')
+       })
+
+   </script>
+</body>
+</html>

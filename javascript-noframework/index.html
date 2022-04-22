@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            position: relative;
+            padding: 8px 16px;
+            background: #009579;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .button:active {
+            background: #007a63;
+        }
+
+        .button__text {
+            font: bold 20px 'QuickSand', san-serif;
+            color: #ffffff;
+            transition: all 0.3s;
+        }
+
+        .button--loading .button__text {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+   <button class="button">
+       <span class="button__text">Save changes</span>
+   </button> 
+</body>
+</html>
