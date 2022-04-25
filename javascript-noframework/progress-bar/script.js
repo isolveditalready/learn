@@ -1,5 +1,5 @@
 const f = (() => {
-         // draw the rec
+         // draw the rec now
          const button = document.querySelector('.btn')
          const value = document.querySelector('.value')
          let per = 0;
