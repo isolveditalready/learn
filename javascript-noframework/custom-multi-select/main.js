@@ -27,8 +27,10 @@ class CustomSelect {
             itemElement.addEventListener('click', (e) => {
                     console.dir(e.target)
                     if (itemElement.classList.contains('select__item--selected')) {
+                        this.optionSelect = optionElement
                         this._deselect(e)
                     } else {
+                        this.optionSelect = optionElement
                         this._select(e)
                     }
             })
@@ -37,15 +39,18 @@ class CustomSelect {
     }
 
     _select(s) {
-        console.log("this",this)
+        this.optionSelect.selected = true
         s.target.classList.add('select__item--selected')
     }
 
     _deselect(s) {
+        this.optionSelect.selected = false 
         s.target.classList.remove('select__item--selected')
     }
 }
 
 document.querySelectorAll(".custom-select").forEach(selectElement => {
+    console.log("here we go")
     new CustomSelect(selectElement)
+    console.log("here we go end")
 })
