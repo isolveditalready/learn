@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #input {
+            padding: .5rem;
+            height: 10px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+   Name: <input id="input" class="input"/>
+   <script>
+       const nameInput = document.querySelector('#input')
+       const formObject = {}
+
+       Object.defineProperty(formObject, 'ob', {
+           value: 75,
+           writable: true
+       })
+       nameInput.value = formObject.ob
+       console.log(formObject.ob)
+
+       nameInput.addEventListener('keyup', (e) => {
+           console.dir(e.target.value)
+           formObject.ob = e.target.value
+           console.log(`formObject is ${formObject.ob}`)
+       })
+   </script>
+</body>
+
+</html>
