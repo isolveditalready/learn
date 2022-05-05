@@ -13,7 +13,7 @@ export default class extends AbstractView {
                 ksdfj;sdlkfj;sdlkfjsd;lfkjsd;lfjsd;fkjsd;flkjsd;fjsdf
             </p>
             <p>
-            hello world sdfsdfsdfsdfsdfsdfsdfsdfsdf
+                <a href="/posts" data-link>View recent posts</a> 
             </p>
         `;
     }
