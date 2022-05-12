@@ -3,12 +3,15 @@ import Toast from "./Toast.js"
 document.querySelector("button").addEventListener('click', () => {
     const toast = new Toast({
         position: "top-right",
-        text:"WORK NOW",
-        autoClose:2000,
+        text:"Please work now!",
+        autoClose:1300,
         canClose:true,
         showProgress: true,
     })
     setTimeout(() => {
-        toast.update({text: "OK???"})
-    },1500)
+        toast.update({text: "NO????"})
+    },1000)
+    setTimeout(() => {
+        toast.update({text: "OK!!!???"})
+    },1300)
 })
