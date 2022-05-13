@@ -1,5 +1,6 @@
 export default class KanbanAPI {
     static getItems(columnId) {
+        console.log("read from getItems")
         const column = read().find(column => column.id == columnId)
 
         if (!column) {
@@ -9,6 +10,7 @@ export default class KanbanAPI {
     }
 
     static insertItem(columnId, content ) {
+        console.log("read from insertItem")
         const data = read()
         const column = data.find(column => column.id == columnId)
         const item = {
@@ -27,6 +29,7 @@ export default class KanbanAPI {
     }
 
     static updateItem(itemId, newProps) {
+        console.log("read from updateItem")
         const data = read()
         // data.forEach(d => {
         //     if (d.id === itemId) {
@@ -93,7 +96,7 @@ console.log("here")
 
 
 function read() {
-    console.log("reading")
+    console.log("::::::::::: read")
     const json = localStorage.getItem("kanban-data")
 
     if (!json) {
