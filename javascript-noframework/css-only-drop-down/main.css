@@ -1,0 +1,45 @@
+.nav {
+    display: flex;
+    background-color: #009578;
+}
+
+.nav * {
+    font: 500 15px 'Quicksand';
+}
+
+.nav__link {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: #009578;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.2s;
+}
+
+.nav__link:hover {
+    background-color: #007f66;
+}
+
+.nav__link-group {
+    position: absolute;
+    top:100%;
+    left: 0;
+    min-width: 100%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+} 
+
+
+.nav__link:hover .nav__link-group {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    transition: opacity 0.2s, visibility 0.2s transform 0.2s
+}

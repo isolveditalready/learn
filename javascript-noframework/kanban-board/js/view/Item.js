@@ -17,16 +17,11 @@ export default class Item {
         const onBlur = () => {
             const newContent = this.elements.input.textContent.trim()
 
-            console.log(this.content)
-            console.log(newContent)
-
             if (newContent == this.content ) {
                 return
             }
 
             this.content = newContent
-            //KanbanAPI.updateItem(id,this)
-            console.log("about to updateitem from class Item")
             KanbanAPI.updateItem(id, {
                 content: this.content
             })
@@ -34,23 +29,16 @@ export default class Item {
 
         this.elements.input.addEventListener("blur", onBlur)
         this.elements.input.addEventListener('dblclick', () => {
-            console.log("you doubl clicked me")
             confirm("ARE you SURE you want to delete me?")
 
             if(confirm) {
-                console.log("OK we are a go for delete")
                 KanbanAPI.deleteItem(id)
-                //const p = this.elements.input.parentElement
-                //p.remove()
-                //this.elements.input.parentElement.remove()
                 this.elements.input.removeEventListener("blur", onBlur)
                 this.elements.root.parentElement.removeChild(this.elements.root)
             }
         })
 
         this.elements.root.addEventListener('dragstart', (e) => {
-            console.log("you are dragging me")
-            console.log(e)
             e.dataTransfer.setData("text/plain", id)
         })
 

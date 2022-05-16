@@ -17,14 +17,12 @@ export default class Column {
         this.elements.items.appendChild(topDropZone)
 
         this.elements.addItem.addEventListener('click', () => {
-            console.log('getting this crap', this)
             const newItem = KanbanAPI.insertItem(id, "")
             
             this.renderItem(newItem)
         })
 
         KanbanAPI.getItems(id).forEach( item  => {
-            console.log("got you", item)
             this.renderItem(item)
         })
     }
