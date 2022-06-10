@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            border: none;
+            background: #009578;
+            color: #ffffff;
+            padding: 10px 16px;
+            cursor: pointer;
+            font-family: 'Fira Sans', sans-serif;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            min-width: 125px;
+        }
+
+        .button__progress {
+            position: absolute;
+            height: 100%;
+            width: 3%;
+            top:0;
+            left: 0;
+            background: rgba(0,0,0, 0.2)
+        }
+
+        .button__text {
+            position: relative;
+
+        }
+    </style>
+</head>
+<body>
+   <button class="button" data-progress-text="Uploading..." data-complete-text="Complete!">
+    <div class="button__progress"></div>
+    <span class="button__text">Upload File</span>
+   </button> 
+   <script>
+       let bar = 0
+
+       const btnUploadFile = document.querySelector('.button')
+       btnUploadFile.addEventListener('click', (e) => {
+           console.dir(e)
+           console.log('----')
+           console.log(e.target.parentElement.className)
+           console.log('----')
+           let button
+           if (e.target.parentElement.className == 'button') {
+                button = e.target.parentElement
+           } else {
+                button = e.target
+           }
+           //e.target.parentelement == 'button.button'
+            setButtonProgress(button, 10)
+       })
+
+       function setButtonProgress(button, percent ) {
+           console.log(button)
+           const textElement = button.querySelector('.button__text')
+           let p = Number(percent)
+
+           //button.querySelector(".button__progress").style.width = `${percent}%`
+           const s = setInterval(() => {
+                button.querySelector(".button__progress").style.width = `${p}%`
+
+                p += 10 
+                if ( p < 100 ) {
+                    textElement.textContent = button.dataset.progressText 
+                } else if ( p > 100) {
+                    textElement.textContent = button.dataset.completeText
+                    clearInterval(s)
+                }
+           },100)
+       }
+
+        //    let num = button_progress.style.width.substring(-1,1)
+        //    console.log(`num is ${num}`)
+        //    let button_progress_total = Number(button_progress.style.width) + 10
+        //    console.log(button_progress_total)
+        //    console.log(typeof button_progress_total)
+        //    button_progress.style.width += button_progress_total  + '%' 
+        //    console.log(e)
+   </script>
+</body>
+</html>

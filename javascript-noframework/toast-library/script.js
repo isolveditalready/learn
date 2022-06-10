@@ -4,7 +4,7 @@ document.querySelector("button").addEventListener('click', () => {
     const toast = new Toast({
         position: "top-right",
         text:"Please work now!",
-        autoClose:1300,
+        autoClose:2300,
         canClose:true,
         showProgress: true,
     })
