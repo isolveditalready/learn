@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #inputCopy {
+            position: relative;
+        }
+        
+        .copy {
+            position: absolute;
+            left: 45px;
+            top: 1px;
+            display: none;
+        }
+        
+        .copyShow {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" class="input1">
+
+    <button id="inputCopy">copy <div class="copy">copied!</div></button>
+    <script>
+        const input1 = document.querySelector('.input1')
+        const inputCopy = document.querySelector('#inputCopy')
+        const copied = document.querySelector('.copy')
+        inputCopy.addEventListener('click', function() {
+            navigator.clipboard.writeText(input1.value).then(function() {
+                console.log("copy was done")
+                copied.classList.add('copyShow')
+            })
+        })
+    </script>
+</body>
+
+</html>

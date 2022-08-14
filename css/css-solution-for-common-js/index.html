@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="more-info">
+        <li><a href="#store">Store and sync</a></li>
+        <li><a href="#share">Share</a></li>
+        <li><a href="#secure">Stay secure</a></li>
+    </ul>
+
+    <header class="grid-stack">
+        <div class="text-center padding-400 surface-neutral-200 flow">
+            <h1 class="fs-900 fw-bold">CSS Solutions for JS problems</h1>
+            <p>CSS can solve a surpring number of common issues that we run into!</p>
+        </div>
+        <img src='https://images.unsplash.com/photo-1621252179027-94459d278660?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTQxOTY1ODE&ixlib=rb-1.2.1&q=80' alt=''>
+
+    </header>
+
+    <main class="container margin-block-500">
+        <h2 class="fs-700 margin-block-400">Finding empty elements with <code>:empty</code></h2>
+
+        <div class="padding-400 surface-neutral-100">
+            <p>Please enter your information below</p>
+            <form class="flow">
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+                <p class="error"></p>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="grid-even-columns margin-block-400" style="align-items: start">
+            <div class="profile flow surface-neutral-100 padding-400">
+                <h2 class="fw-bold">Jane Smith</h2>
+                <img src="https://faces-img.xcdn.link/thumb-lorem-face-5982_thumb.jpg" alt="">
+                <p class="fw-bold">Editor</p>
+                <p class="fs-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae maiores officia dolor quisquam, sint sit expedita cum aspernatur magni iusto dignissimos blanditiis cumque ut nisi.</p>
+            </div>
+            <div class="profile flow surface-neutral-100 padding-400">
+                <h2 class="fw-bold">John Smith</h2>
+                <img src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg" alt="">
+                <p class="fw-bold">Editor</p>
+                <p class="fs-300"></p>
+            </div>
+        </div>
+
+        <h2 class="fs-700 margin-block-500">Smooth scrolling and <code>:target</code></h2>
+        <div class="grid-auto-flow">
+            <div id="store" class="flow padding-400 surface-neutral-100">
+                <img class="icon" src="https://assets.codepen.io/308367/comment.svg" />
+                <h3 class="fs-400 fw-bold">Store and sync</h3>
+                <p>Keep all your files securely stored, up to date, and accessible from any device</p>
+            </div>
+            <div id="share" class="flow padding-400 surface-neutral-100">
+                <img class="icon" src="https://assets.codepen.io/308367/share.svg" />
+                <h3 class="fs-400 fw-bold">Share</h3>
+                <p>Quickly send any file—big or small—to anyone, even if they don’t have a Dropbox account.</p>
+            </div>
+            <div id="secure" class="flow padding-400 surface-neutral-100">
+                <img class="icon" src="https://assets.codepen.io/308367/shield.svg" />
+                <h3 class="fs-400 fw-bold">Stay secure</h3>
+                <p>Keep your files private with multiple layers of protection from the service trusted by millions.</p>
+            </div>
+
+        </div>
+
+        <h2 class="fs-700 margin-block-500"><code>:only-child</code> and <code>:only-of-type</code></h2>
+
+        <div class="testimonials | flow">
+            <blockquote class="flow padding-400 surface-primary-400 text-neutral-100">
+                <p>A really awesome quote right here</p>
+            </blockquote>
+
+            <blockquote class="flow padding-400 surface-primary-400 text-neutral-100">
+                <img src="https://assets.codepen.io/308367/av.jpg" />
+                <p>I loved this product so much, it was absolutely amazing!</p>
+            </blockquote>
+
+            <blockquote class="flow padding-400 surface-primary-400 text-neutral-100">
+                <img src="https://assets.codepen.io/308367/av.jpg" />
+                <p>I loved this product so much, it was absolutely amazing!</p>
+                <p>I loved it so much I can go on and on about it!</p>
+            </blockquote>
+        </div>
+
+    </main>
+</body>
+
+</html>

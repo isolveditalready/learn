@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.mab {
+    position: relative;
+    background: #dddddd;
+    display: inline-flex;
+}
+
+.mab__button {
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    color: #333333;
+    cursor: pointer;
+}
+
+.mab__button:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.mab__button:not(.mab__button--menu) .mab__icon {
+    margin-right: 8px;
+}
+
+.mab__button--secondary {
+    width: 100%;
+}
+
+.mab__text {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.mab__list {
+    position: absolute;
+    display: none;
+    top: 115%;
+    right: 0;
+    padding: 5px 0;
+    background: #ffffff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.mab__list--visible {
+    display: block;
+}

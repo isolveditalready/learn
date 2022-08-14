@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 10px;
+}
+
+header {
+    border: 1px solid black;
+    height: 60px;
+}
+
+footer {
+    border: 1px solid black;
+    height: 120px;
+    margin-top: 50px;
+}
+
+.mainC {
+    position: relative;
+    height: 75vh;
+    width: 100%;
+}
+
+.content1 {
+    position: absolute;
+    top: 10px;
+    border: 1px solid red;
+    margin-right: 10px;
+    width: 70%;
+    height: 100%;
+}
+
+.content2 {
+    position: absolute;
+    border: 1px solid black;
+    width: 28%;
+    height: 48%;
+    right: 0;
+    top: 10px;
+}
+
+.content3 {
+    position: absolute;
+    border: 1px solid cyan;
+    width: 28%;
+    height: 49%;
+    right: 0;
+    bottom: -10px;
+}
